@@ -199,7 +199,7 @@
           
           conceptionDate = moment(dueDate).subtract(40, 'weeks');
           var diff = moment().diff(conceptionDate);
-          this.weeksAlong = Math.round(moment.duration(diff).as('weeks'));
+          this.weeksAlong = Math.floor(moment.duration(diff).as('weeks'));
           
           this.timeline.setOptions(this.options);
           this.data.clear();
